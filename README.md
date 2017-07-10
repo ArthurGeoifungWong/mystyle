@@ -1,7 +1,7 @@
 # mystyle
 a website that show my projects.
 
-work1：
+work1：<br/>
 1.个人空间（静态页面）<br/>
 2.宣传页面（静态页面）<br/>
 3.仿魅族（静态页面）<br/>
