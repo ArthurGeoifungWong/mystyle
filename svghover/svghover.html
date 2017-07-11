@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    html,body{
+        background: pink;
+    }
+        svg{
+            width: 320px;
+            height: 60px;
+        }
+        .shape{
+            width: 320px;
+            height: 60px;
+            fill:transparent;
+            stroke:skyblue;
+            stroke-width:8px;
+            stroke-dasharray:140 470;
+            /*stroke-dashoffset:-760;*/
+            /*stroke-dashoffset:-474;*/
+            stroke-dashoffset:-470;
+            transition: 1s;
+        }
+        .shape:hover{
+            stroke-dasharray:760;
+            stroke-dashoffset:0;
+            stroke-width:4px;
+        }
+        ul{
+            display: inline-block;
+            margin-left: 300px;
+        }
+        li{
+            display: inline;
+            list-style: none;
+            text-align: center;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            color: green;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            /*position: absolute;
+            z-index: 1;*/
+        }
+        /*a:hover{
+            background: grey;
+            color: yellow;
+        }*/
+        .svg{
+            width: 150px;
+            height: 40px;
+            position: absolute;
+            z-index: 0;
+            cursor: pointer;
+        }
+        .svg>rect{
+            width: 150px;
+            height: 40px;
+            fill:transparent;
+            stroke:skyblue;
+            stroke-width:8px;
+            stroke-dasharray:40 245;
+            stroke-dashoffset:-245;
+            transition: 1s;
+            position: absolute;
+            z-index: 0;
+        }
+        .svg>rect:hover {
+            stroke-width:4px;
+            stroke-dasharray:380;
+            stroke-dashoffset:0;
+        }
+        .svg:hover+a{
+            background: grey;
+            color: yellow;
+        }
+        /*.svg1{
+            width: 150px;
+            height: 150px;
+        }*/
+        /*.svg1 .circle{
+            fill:transparent;
+            stroke-width:4px;
+            stroke:skyblue;
+        }
+        .svg1>circle{
+            stroke-width:8px;
+            stroke-dasharray:50;
+            stroke-dashoffset:0;
+        }
+        .svg1>circle:hover{
+            stroke-width:4px;
+            stroke-dasharray:400;
+            stroke-dashoffset:0;
+        }*/
+        .top{
+            display: inline-block;
+            background: pink;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            margin: 30px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.5),-1px -1px 2px rgba(0,0,0,0.5);
+        }
+        .top:hover{
+            background: orange;
+            opacity: 0.3;
+            box-shadow: 1px 1px 2px rgba(255,255,255,0.5),-1px -1px 2px rgba(0,0,0,0.5);
+        }
+        .bottom{
+            display: inline-block;
+            background: black;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            margin: 30px;
+            color: white;
+            outline: 1px solid ;
+            outline-color: rgba(255,255,255,0.5);
+            outline-offset: 0px;
+            box-shadow: 0 0 20px rgba(255,255,255,0);
+            transition: 1s;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        .bottom:hover{
+            outline-color: rgba(255,255,255,0);
+            outline-offset: 15px;
+            border: 1px solid ;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),0px 0px 20px rgba(255,255,255,0.6);
+            text-shadow: 0 0 20px red;
+            /*line-height: 38px;*/
+        }
+        .bottom1{
+            display: inline-block;
+            background: black;
+            text-align: center;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            color: white;
+            outline: 1px solid ;
+            outline-color: rgba(255,255,255,0.5);
+            outline-offset: 0px;
+            box-shadow: 0 0 20px rgba(255,255,255,0);
+            transition: 1s;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-bottom: -12px;
+        }
+        .bottom1:hover{
+            outline-color: rgba(255,255,255,0);
+            outline-offset: 15px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),0px 0px 20px rgba(255,255,255,0.6);
+            text-shadow: 0 0 20px red;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:inline-block;">
+        <svg>
+            <rect class="shape"></rect>
+        </svg>
+    </div>
+    <ul>
+        <li><svg class="svg"><rect></rect></svg><a href="###">js</a></li>
+        <li><svg class="svg"><rect></rect></svg><a href="###">jq</a></li>
+        <li><svg class="svg"><rect></rect></svg><a href="###">php</a></li>
+    </ul>
+    <div style="position:relative;">
+        <svg class=".svg1" style="width:82px;height:82px;">
+            <circle id="c" class="circle" cx="41" cy="41" r="40" stroke="skyblue" fill="transparent" stroke-dasharray="30" stroke-width="1px"></circle>
+        </svg>
+        <svg class=".svg1" style="width:100px;height:100px;">
+            <circle id="d" class="circle" cx="50" cy="50" r="40" stroke="skyblue" fill="transparent" stroke-dasharray="30" stroke-width="2px"></circle>
+        </svg>
+        <svg class=".svg1" style="width:90px;height:90px; position:absolute;z-index:2;">
+            <circle id="e" class="circle" cx="42" cy="42" r="40" stroke="skyblue" fill="transparent" stroke-dasharray="30" stroke-width="3px"></circle>
+        </svg>
+        <img src="imgs/touxiang.jpg" alt="" style="width:80px; height:80px; position:absolute; z-index:1; border-radius:50%; margin:1px;">
+    </div>
+
+    <div style="position:relative;height:100px;overflow:hidden;">
+        <svg class=".svg1" style="width:90px;height:90px; ">
+            <circle id="f" class="circle" cx="42" cy="42" r="40" stroke="skyblue" fill="transparent" stroke-dasharray="30" stroke-width="3px"></circle>
+        </svg>
+        <img id="img" src="imgs/touxiang.jpg" alt="" style="width:78px; height:78px; border-radius:50%; margin-left:-96px; margin-bottom:9px;">
+    </div>
+
+    <div style="background:skyblue;">
+        <a href="###" class="top">hover</a>
+    </div>
+    <div style="background:green;box-sizing:border-box;">
+        <a href="###" class="bottom">hover</a>
+        <a href="###" class="bottom1">hover</a>
+    </div>
+    <script>
+        var c=document.getElementById("c");
+        var d=document.getElementById("d");
+        var e=document.getElementById("e");
+        var f=document.getElementById("f");
+        var img=document.getElementById("img");
+        c.onmouseover=function(){
+            this.style.strokeDasharray="300";
+            this.style.transition="1s";
+        }
+        c.onmouseout=function(){
+            this.style.strokeDasharray="30";
+            this.style.transition="1s";
+        }
+        d.onmouseover=function(){
+            this.style.strokeDasharray="300";
+            this.style.transition="1s";
+        }
+        d.onmouseout=function(){
+            this.style.strokeDasharray="30";
+            this.style.transition="1s";
+        }
+        e.onmouseover=function(){
+            this.style.strokeDasharray="300";
+            this.style.transition="1s";
+        }
+        e.onmouseout=function(){
+            this.style.strokeDasharray="30";
+            this.style.transition="1s";
+        }
+        img.onmouseover=function(){
+            f.style.strokeDasharray="300";
+            f.style.transition="1s";
+        }
+        img.onmouseout=function(){
+            f.style.strokeDasharray="30";
+            f.style.transition="1s";
+        }
+    </script>
+</body>
+</html>
